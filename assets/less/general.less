@@ -1,0 +1,41 @@
+body {
+  font-family: @mainFace, sans-serif;
+  background: @cream;
+  color: @coffee;
+}
+
+/* font specifications */
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headerFace, sans-serif;
+}
+
+p {
+  color: @coffee;
+}
+
+/* site bordering */
+#border-top, #border-bottom, #border-left, #border-right {
+  background: @coffee;
+  position: fixed;
+  z-index: 11;
+}
+
+#border-left, #border-right {
+  top: 0; bottom: 0;
+  width: 15px;
+}
+
+#border-left { left: 0; }
+#border-right { right: 0; }
+
+#border-top, #border-bottom {
+  left: 0; right: 0;
+  height: 15px;
+}
+
+#border-top { top: 0; }
+#border-bottom { bottom: 0; }
+
+.body-row {
+  margin: 0px 25px 30px 25px;
+}

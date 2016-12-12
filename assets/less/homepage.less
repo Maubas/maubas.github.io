@@ -1,0 +1,42 @@
+.parallax {
+  background-image: url("../images/cloudy.gif");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .dreamstate {
+    background-color: rgba(222, 220, 210, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+
+    h1 {
+      color: #FFF;
+      text-shadow: 2px 3px rgba(73, 71, 68, .5);
+      font-size: 150px;
+    }
+  }
+}
+
+.diagonal-slice {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  border-left: 4000px solid transparent;
+  border-bottom: 500px solid @cream;
+  z-index: 10;
+}
