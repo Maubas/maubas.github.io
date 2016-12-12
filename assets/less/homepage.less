@@ -40,15 +40,20 @@
 }
 
 .diagonal-slice {
-  color: #fff;
-  background-color: @cream;
-  background: @cream;
-  margin-top: -100px;
-  margin-bottom: -135px;
-  height: 250px;
-  transform:  rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -webkit-transform:  rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -moz-transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -o-transform:  rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -ms-transform:  rotate(352deg) scale(1) skew(0deg) translate(0px);
+   z-index:1;
+  display:block;
+  float:left;
+  margin-top:-75px;
+  width:100%;
+  background:@cream;
+  transform:skew(0deg, -5deg);
+  -ms-transform:skew(0deg, -5deg);
+  -webkit-transform:skew(0deg, -5deg);
+}
+
+.body-row {
+  margin: 75px 25px 30px 25px;
+  transform:skew(0deg, 5deg);
+  -ms-transform:skew(0deg, 5deg);
+  -webkit-transform:skew(0deg, 5deg);
 }

@@ -53,9 +53,6 @@ h6 {
 #border-bottom {
   bottom: 0;
 }
-.body-row {
-  margin: 0px 25px 30px 25px;
-}
 .parallax {
   background-image: url("../images/cloudy.gif");
   height: 100vh;
@@ -93,17 +90,21 @@ h6 {
   font-style: italic;
 }
 .diagonal-slice {
-  color: #fff;
-  background-color: #dedcd2;
+  z-index: 1;
+  display: block;
+  float: left;
+  margin-top: -75px;
+  width: 100%;
   background: #dedcd2;
-  margin-top: -100px;
-  margin-bottom: -135px;
-  height: 250px;
-  transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -webkit-transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -moz-transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -o-transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
-  -ms-transform: rotate(352deg) scale(1) skew(0deg) translate(0px);
+  transform: skew(0deg, -5deg);
+  -ms-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+}
+.body-row {
+  margin: 55px 25px 30px 25px;
+  transform: skew(0deg, 5deg);
+  -ms-transform: skew(0deg, 5deg);
+  -webkit-transform: skew(0deg, 5deg);
 }
 header {
   width: 100%;
