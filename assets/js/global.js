@@ -7877,4 +7877,18 @@ $(".cross").click(function() {
         $(".hamburger").show();
     });
 });
+
+$('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+            $(".cross").click();
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 2e3);
+            return false;
+        }
+    }
+});
 //# sourceMappingURL=global.js.map
