@@ -4,10 +4,11 @@ module.exports = (grunt) ->
     jsSource1: [
       # from template/page/html/head
       'node_modules/jquery/dist/jquery.js'
+      'node_modules/bootstrap/dist/bootstrap.js'
       'assets/js/scripts.js'
       ]
 
-    jsDest1: 'assets/global.js'
+    jsDest1: 'assets/js/global.js'
 
 
     uglify:
