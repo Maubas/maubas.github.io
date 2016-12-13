@@ -3,8 +3,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     jsSource1: [
       # from template/page/html/head
-      'node_modules/jquery/dist/jquery.js'
-      'node_modules/bootstrap/dist/bootstrap.js'
+      'assets/js/bootstrap.min.js'
       'assets/js/scripts.js'
       ]
 

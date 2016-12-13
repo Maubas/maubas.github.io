@@ -17,10 +17,10 @@ l　　　　　　　ヽノ　　　　　 　        l
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maureen Basil</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/global.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
   </head>
 
   <body>
@@ -32,16 +32,14 @@ l　　　　　　　ヽノ　　　　　 　        l
     <div class="menu">
       <ul>
         <a href="#about"><li>ABOUT</li></a>
-        <a href="#"><li>SKILLS</li></a>
-        <a href="#"><li>EXAMPLES</li></a>
-        <a href="#"><li>CONTACT</li></a>
+        <!-- <a href="#examples"><li>EXAMPLES</li></a> -->
+        <a href="#contact"><li>CONTACT</li></a>
       </ul>
     </div>
 
     <button class="get-scrolling">&#9660;</button>
 
     <div class="row">
-
       <div class="parallax">
         <div class="dreamstate"></div>
         <div class="caption">
@@ -52,21 +50,83 @@ l　　　　　　　ヽノ　　　　　 　        l
 
       <div class="diagonal-slice">
         <a name="about"></a>
-        <div class="row body-row">
-          <div class="col-sm-8">
+        <div class="row body-row slice-fix vertical-align">
+          <div class="col-sm-5 col-xs-12 col-md-offset-2 col-sm-offset-2">
             <h2>About</h2>
             <p>
-              Hello! I'm Maureen, and I make things.
+              Hello! I'm <a data-toggle="tooltip" data-placement="top" title="Mau / Mo / Mira / Reen / etc.">Maureen</a>, and I make pretty things sometimes. By trade, I'm a developer and designer, but first and foremost I'm a student. Currently, I'm completing my final year of schooling in <a data-toggle="tooltip" data-placement="top" title="Come grab coffee with me sometime!">Chattanooga</a> and taking things at my own pace. Many like to consider me to be "<a data-toggle="tooltip" data-placement="top" title="Spoiler: I'm not">full-stack</a>," but I've still got a lot to learn. I've had the opportunity to work at some pretty fun places across the spectrum, from the Air Force to a startup known as Delegator. If you're interested in knowing more, have a look at my <a href="assets/pdfs/Resume2016.pdf">resume</a>.
             </p>
+            <br/>
             <p>
-              If you're interested in hobby things, I'm a fairly avid reader and gamer. Currently, my time sink of choice is <a id="ffxiv">Final Fantasy XIV</a>.
+              If you're interested in hobby things, I'm a fairly avid reader and gamer. Currently, my time sink of choice is <a id="ffxiv" data-toggle="tooltip" data-placement="bottom" title="Gilgamesh!">Final Fantasy XIV</a>, but I have a deep love for things that tell stories well.
             </p>
           </div>
 
-          <div class="col-sm-4 text-center">
+          <div class="col-sm-4 col-xs-12 text-center">
             <img id="about-image" src="assets/images/about-balloon.png">
           </div>
+        </div>
+      </div>
 
+      <!-- <div class="col-sm-12 body-row">
+        <div class="row">
+          <div class="col-sm-5 col-xs-12 col-md-offset-2 col-sm-offset-2">
+            <a name="examples"></a><h2>Examples</h2>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <img class="example-image num-1" src="assets/images/example-1.png">
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <img class="example-image num-2" src="assets/images/example-2.png">
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <img class="example-image num-3" src="assets/images/example-3.png">
+        </div>
+      </div> -->
+
+      <div class="diagonal-slice-footer diagonal-slice">
+        <div class="form-area row body-row vertical-align">
+          <div class="col-sm-2 col-xs-12 col-md-offset-2 col-sm-offset-2 slice-fix">
+            Wheee
+          </div>
+          <div class="col-sm-5 col-xs-12 slice-fix">
+            <a name="contact"></a><h2>Contact</h2>
+
+            <form  action="https://formspree.io/your@email.com" method="POST">
+              <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name"  placeholder="Herp Derp">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@email.com">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="phone">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <center><button type="submit" class="btn btn-xl btn-primary">Submit</button></center>
+            </form>
+
+          </div>
         </div>
       </div>
     </div>
