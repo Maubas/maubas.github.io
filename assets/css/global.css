@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   background: #dedcd2;
   color: #494744;
   overflow-x: hidden;
@@ -19,6 +20,14 @@ h5,
 h6 {
   color: #000;
   font-family: 'Bebas Neue', sans-serif;
+}
+h2 {
+  font-size: 45px;
+}
+a,
+a:hover,
+a:active {
+  color: #01a9ab;
 }
 /* site bordering */
 #border-top,
@@ -83,6 +92,11 @@ h6 {
   font-size: 150px;
   margin-bottom: -20px;
 }
+@media only screen and (max-device-width: 768px) {
+  .parallax .caption h1 {
+    font-size: 80px !important;
+  }
+}
 .parallax .caption .pronunciation {
   font-size: 25px;
   color: #FFF;
@@ -93,7 +107,7 @@ h6 {
   z-index: 1;
   display: block;
   float: left;
-  margin-top: -75px;
+  margin-top: -70px;
   width: 100%;
   background: #dedcd2;
   transform: skew(0deg, -5deg);
@@ -101,10 +115,25 @@ h6 {
   -webkit-transform: skew(0deg, -5deg);
 }
 .body-row {
-  margin: 55px 25px 30px 25px;
+  margin: 75px 25px 0px 25px;
   transform: skew(0deg, 5deg);
   -ms-transform: skew(0deg, 5deg);
   -webkit-transform: skew(0deg, 5deg);
+}
+.get-scrolling {
+  background: none;
+  position: absolute;
+  bottom: 1.5em;
+  right: 3em;
+  line-height: 45px;
+  padding: 5px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 99;
 }
 header {
   width: 100%;

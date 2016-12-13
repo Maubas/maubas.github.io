@@ -7878,6 +7878,22 @@ $(".cross").click(function() {
     });
 });
 
+$(".get-scrolling").click(function() {
+    $("html, body").animate({
+        scrollTop: $(this).offset().top
+    }, 2e3);
+});
+
+$("#ffxiv").mouseover(function(event) {
+    event.preventDefault();
+    $("#about-image").attr("src", "assets/images/about-balloon-alt.png");
+});
+
+$("#ffxiv").mouseout(function(event) {
+    event.preventDefault();
+    $("#about-image").attr("src", "assets/images/about-balloon.png");
+});
+
 $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
         var target = $(this.hash);
