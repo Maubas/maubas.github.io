@@ -1,16 +1,17 @@
 .parallax {
-  background-image: url("../images/cloudy.gif");
+  background-image: url("../images/coffee.gif");
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100vw;
 
   .dreamstate {
     background-color: rgba(222, 220, 210, 0.5);
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
   }
@@ -19,7 +20,7 @@
     position: absolute;
     left: 0;
     top: 25%;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     color: #000;
 
@@ -44,45 +45,87 @@
   }
 }
 
+.about-text {
+  .about-subhead {
+    line-height: 1px;
+    padding: 0px 0px 15px 0px;
+    margin-top: -8px;
+    font-family: @headerFace, sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.about-face {
+  max-width: 90%;
+  border-radius: 50%;
+}
+
 .diagonal-slice {
-  z-index:1;
-  display:block;
-  float:left;
-  margin-top:-70px;
-  width:100%;
-  background:@cream;
-  transform:skew(0deg, -5deg);
-  -ms-transform:skew(0deg, -5deg);
-  -webkit-transform:skew(0deg, -5deg);
-}
-.diagonal-slice-footer {
-  margin-top: 75px !important;
+  background:#FFF;
+  padding-bottom: 45px;
 }
 
-.body-row {
-  margin: 75px 25px 0px 25px;
-}
-
-.slice-fix {
-  transform:skew(0deg, 5deg);
-  -ms-transform:skew(0deg, 5deg);
-  -webkit-transform:skew(0deg, 5deg);
-}
+.body-row { margin-top: 45px; }
 
 .get-scrolling {
-  background: none;
+  background: @coffee;
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  bottom: 0px;
+  right: 50px;
   line-height: 45px;
   padding: 5px 15px 0px 15px;
-  color: #fff;
+  color: #FFF;
   border: 0;
-  font-size: 50px;
   font-weight: bold;
   cursor: pointer;
   outline: none;
   z-index: 10;
+  width: 125px;
+  height: 85px;
+  padding-top: 20px;
+}
+
+.bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  -webkit-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+  colr:000;
+}
+
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
 }
 
 #ffxiv {
@@ -114,3 +157,122 @@
   padding-top: 50px;
   padding-bottom: 30px;
 }
+
+#portfolio-row {
+  height: 400px;
+  background-image: url("../images/portfolio/demours.png");
+  // background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  span {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background-image: url('../images/empty.png');
+  }
+}
+
+.gradient-desc {
+  height: 400px;
+  background: rgba(0,0,0,0.7);
+
+  .site-description {
+    padding: 20px 10px;
+    color: #FFF;
+
+    .site-title {
+      text-align: center;
+      font-family: @headerFace, sans-serif;
+      font-size: 35px;
+    }
+
+    .site-blurb {
+      border-top: 1px solid #fff;
+      padding: 15px 10px 10px 10px;
+      font-size: 13px;
+    }
+  }
+}
+
+.logo-row {
+  background: #FFF;
+}
+
+.portfolio-logo {
+  padding-top: 5px;
+  height: 65px;
+
+  &:hover {
+    background: rgba(1, 169, 171, 0.1);
+    cursor: pointer;
+  }
+
+  &.active {
+    border-bottom: 3px solid @teal;
+    background: rgba(1, 169, 171, 0.1);
+  }
+
+  .logo {
+    height:50px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 10px;
+
+    &.demours {
+      background-image: url("../images/portfolio/logos/demours.png");
+    }
+
+    &.rabom {
+      background-image: url("../images/portfolio/logos/rabom.png");
+    }
+
+    &.biketours {
+      background-image: url("../images/portfolio/logos/biketours.png");
+    }
+
+    &.fluidmesh {
+      background-image: url("../images/portfolio/logos/fluidmesh.png");
+    }
+
+    &.signmojo {
+      background-image: url("../images/portfolio/logos/signmojo.png");
+    }
+  }
+}
+
+.modal-body {
+  padding: 0px;
+  img { width: 100%; }
+}
+
+.contact-balloon {
+  width: 85%;
+  max-width: 150px;
+}
+
+.fa-sm {
+  font-size:0.63em;
+}
+
+.fa-stack .fa { color: @coffee; }
+.fa-stack .fa.fa-circle-thin { color: @coffee; }
+.fa-stack .fa.fa-circle {
+  opacity:0.0;
+  color:@coffee;
+}
+
+.fa-stack:hover .fa.fa-facebook,
+.fa-stack:hover .fa.fa-linkedin,
+.fa-stack:hover .fa.fa-twitch {
+  color: white;
+  cursor: pointer;
+}
+.fa-stack:hover .fa.fa-circle-thin { color: @coffee; }
+.fa-stack:hover .fa.fa-circle { opacity:1.0 }

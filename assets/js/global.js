@@ -915,7 +915,9 @@ $('a[href*="#"]:not([href="#"])').click(function() {
         var target = $(this.hash);
         target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
         if (target.length) {
-            $(".cross").click();
+            if ($(window).width() < 768) {
+                $(".cross").click();
+            }
             $("html, body").animate({
                 scrollTop: target.offset().top
             }, 2e3);
@@ -924,37 +926,80 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     }
 });
 
+function appropriateMenu() {
+    if ($(window).width() < 768) {
+        $(".side-piece").hide();
+        $(".get-scrolling").hide();
+        $(".hamburger").show();
+    } else {
+        $(".side-piece").show();
+        $(".get-scrolling").show();
+        $(".hamburger").hide();
+    }
+}
+
+$(document).ready(appropriateMenu);
+
+$(window).resize(appropriateMenu);
+
+var height = $(".parallax").outerHeight();
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > height - 50) {
+        $(".hamburger").addClass("coffee");
+        $(".cross").addClass("coffee");
+    } else {
+        $(".hamburger").removeClass("coffee");
+        $(".cross").removeClass("coffee");
+    }
+});
+
+$(document).keyup(function(e) {
+    if (e.keyCode == 27 && $(".menu").is(":visible")) {
+        $(".cross").click();
+    }
+});
+
 /** Scroll past parallax **/
 $(".get-scrolling").click(function() {
     $("html, body").animate({
-        scrollTop: $(this).offset().top
+        scrollTop: $(this).offset().top + 85
     }, 2e3);
+    $(this).html('<i class="fa fa-angle-double-down fa-3x"></i>');
 });
 
-/** Surprise about image change **/
-$("#ffxiv").mouseover(function(event) {
-    event.preventDefault();
-    $("#about-image").attr("src", "assets/images/about-balloon-alt.png");
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= $(".get-scrolling").offset().top + 85) {
+        $(".side-piece").addClass("affix");
+        $(".side-piece").removeClass("stay-put");
+    } else {
+        $(".side-piece").addClass("stay-put");
+    }
 });
 
-$("#ffxiv").mouseout(function(event) {
-    event.preventDefault();
-    $("#about-image").attr("src", "assets/images/about-balloon.png");
+/** Menu indicator color changes **/
+$(".get-scrolling").mouseover(function() {
+    $(".get-scrolling i").addClass("hover");
+});
+
+$(".get-scrolling").mouseout(function() {
+    $(".get-scrolling i").removeClass("hover");
 });
 
 /** Tooltips **/
 $('[data-toggle="tooltip"]').tooltip();
 
-/** Example image switcher **/
-$(".example-image").mouseover(function() {
-    var theClass = $(this).attr("class").match(/num-[\w-]*\b/).toString();
-    var theNum = theClass.substring(theClass.length - 1, theClass.length);
-    $("." + theClass).attr("src", "assets/images/example-" + theNum + "-alt.png");
-});
-
-$(".example-image").mouseout(function() {
-    var theClass = $(this).attr("class").match(/num-[\w-]*\b/).toString();
-    var theNum = theClass.substring(theClass.length - 1, theClass.length);
-    $("." + theClass).attr("src", "assets/images/example-" + theNum + ".png");
+/** Portfolio Control **/
+$(".portfolio-logo").click(function() {
+    $(".portfolio-logo").removeClass("active");
+    $(this).addClass("active");
+    var classes = $(".active div").attr("class").split(" ");
+    var currentItem = classes[1];
+    var imageUrl = "assets/images/portfolio/" + currentItem + ".png";
+    $("#portfolio-row").css("backgroundImage", "url('" + imageUrl + "')");
+    $(".modal-body img").attr("src", imageUrl);
+    $(".site-description").addClass("hidden");
+    $("#" + currentItem).removeClass("hidden");
 });
 //# sourceMappingURL=global.js.map
