@@ -71,19 +71,14 @@ $(document).on('scroll', function() {
     $('.side-piece a div').removeClass("current-section");
     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
       $('.contact-section').addClass('current-section');
-      console.log("contact");
     } else if ($(this).scrollTop()>=$('#portfolio').position().top - 10) {
       $('.portfolio-section').addClass('current-section');
-      console.log("portfolio");
     } else if ($(this).scrollTop()>=$('#skills').position().top - 10) {
       $('.skills-section').addClass('current-section');
-      console.log("skills");
     } else if ($(this).scrollTop()>=$('#experience').position().top - 10) {
       $('.experience-section').addClass('current-section');
-      console.log("experience");
     } else if ($(this).scrollTop()>=$('#about').position().top - 10) {
       $('.about-section').addClass('current-section');
-      console.log("about");
     }
   }
 });
