@@ -440,6 +440,9 @@ header {
   border: 0;
   cursor: pointer;
   z-index: 99;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 .hamburger:hover,
 .cross:hover {
