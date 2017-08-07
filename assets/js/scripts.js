@@ -16,6 +16,18 @@ $(".cross").click(function() {
   });
 });
 
+function isiPhone(){
+  return (
+    (navigator.platform.indexOf("iPhone") != -1) ||
+    (navigator.platform.indexOf("iPod") != -1)
+  );
+}
+if(isiPhone()){
+  $('.hamburger').css({"position": "fixed", "top": "23px", "left": "-10px"});
+  $('.cross').css({"position": "fixed", "top": "23px", "left": "-10px"});
+  $('.parallax').css("background-attachment", "scroll");
+}
+
 $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
