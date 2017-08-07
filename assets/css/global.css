@@ -548,6 +548,7 @@ dd {
   letter-spacing: 1px;
 }
 .btn-resume:hover {
-  background-color: rgba(1, 169, 171, 0.1);
-  color: #01a9ab;
+  background-color: #494744;
+  border-color: #494744;
+  color: #FFF;
 }
